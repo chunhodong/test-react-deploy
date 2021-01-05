@@ -13,7 +13,7 @@ app.prepare().then(()=>{
   server.use(express.json());
   server.use(express.urlencoded({extended:true}));
   server.get('*',(req,res)=>handle(req,res));
-  server.listen(prod ? process.env.PORT : 3000,()=>{
-    console.log(`next + express running on port ${prod ? process.env.PORT : 3000}`)
+  server.listen(process.env.PORT,()=>{
+    console.log(`next running on port ${process.env.PORT}`)
   });
 });

@@ -8,6 +8,7 @@ const index = () => {
         <div>
             <Link  href="/hello"><a>Hello로 이동</a></Link>           
             <h1>Index 페이지 : { dt.getTime() }</h1>
+            {process.env.NODE_ENV}
         </div>
     );
 };
